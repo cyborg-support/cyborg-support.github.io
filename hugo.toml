@@ -1,0 +1,4 @@
+baseURL = 'https://cyborg-support.github.io/'
+languageCode = 'en-us'
+title = 'Cyborg Support'
+publishDir = 'docs'

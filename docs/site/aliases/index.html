@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4320&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hugo Aliases | Cyborg Support</title>
+  <link rel="stylesheet" href="/css/site.css" />
+  <link rel="stylesheet" href="/css/mermaid.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script src="/js/site.js"></script>
+  <script src="/js/toc.js"></script>
+</head>
+<body>
+  <nav><a href="/">Cyborg Support</a></nav>
+  
+  <h1>Hugo Aliases</h1>
+  <p><time>April 21, 2026</time></p>
+  
+  <div class="page-layout">
+    <aside class="toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#absolute-vs-relative-paths">Absolute vs relative paths</a></li>
+    <li><a href="#how-the-redirect-works">How the redirect works</a></li>
+    <li><a href="#verifying">Verifying</a></li>
+  </ul>
+</nav></aside>
+    <article><p>Aliases create redirect pages at alternative URLs that point to the current page. Hugo generates a static HTML file with a <code>&lt;meta http-equiv=&quot;refresh&quot;&gt;</code> tag at each alias path.</p>
+<h2 id="usage">Usage</h2>
+<p>Add <code>aliases</code> to the frontmatter of any content file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">+++</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;My Page&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">aliases</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;/old-path/&#39;</span><span class="p">,</span> <span class="s1">&#39;/another-old-path/&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span>
+</span></span></code></pre></div><p>Hugo generates <code>old-path/index.html</code> and <code>another-old-path/index.html</code>, each containing a redirect to the canonical URL of this page.</p>
+<h2 id="absolute-vs-relative-paths">Absolute vs relative paths</h2>
+<p>Always use absolute paths (starting with <code>/</code>).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># Correct — generates /how-to/index.html at the root</span>
+</span></span><span class="line"><span class="cl"><span class="nx">aliases</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;/how-to/&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Wrong — generates /site/how-to/index.html (relative to content path)</span>
+</span></span><span class="line"><span class="cl"><span class="nx">aliases</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;how-to/&#39;</span><span class="p">]</span>
+</span></span></code></pre></div><p>A relative alias is resolved relative to the page&rsquo;s own URL, not the site root. For a page at <code>/site/hosting/</code>, the alias <code>how-to/</code> becomes <code>/site/how-to/</code> — not <code>/how-to/</code>.</p>
+<h2 id="how-the-redirect-works">How the redirect works</h2>
+<p>The generated file contains:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">meta</span> <span class="na">http-equiv</span><span class="o">=</span><span class="s">&#34;refresh&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;0; url=https://cyborg.support/site/hosting/&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;canonical&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;https://cyborg.support/site/hosting/&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>The redirect target uses <code>baseURL</code> from <code>hugo.toml</code>. This means aliases do not work on <code>localhost</code> when <code>baseURL</code> is set to the production domain — the redirect sends you to the live site instead.</p>
+<h2 id="verifying">Verifying</h2>
+<p>After building, confirm the alias file was generated:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo --destination docs
+</span></span><span class="line"><span class="cl">ls docs/how-to/
+</span></span><span class="line"><span class="cl"><span class="c1"># index.html</span>
+</span></span></code></pre></div></article>
+  </div>
+  
+
+</body>
+</html>

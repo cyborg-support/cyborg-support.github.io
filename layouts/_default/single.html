@@ -1,0 +1,11 @@
+{{ define "main" }}
+  <h1>{{ .Title }}</h1>
+  {{ if .TableOfContents }}
+  <div class="page-layout">
+    <aside class="toc">{{ .TableOfContents }}</aside>
+    <article>{{ .Content }}</article>
+  </div>
+  {{ else }}
+  {{ .Content }}
+  {{ end }}
+{{ end }}

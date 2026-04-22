@@ -1,0 +1,6 @@
+{{ define "main" }}
+  <h1>{{ .Site.Title }}</h1>
+  {{ range .Site.RegularPages }}
+    <p><a href="{{ .RelPermalink }}">{{ .Title }}</a> — <time>{{ .Date.Format "January 2, 2006" }}</time></p>
+  {{ end }}
+{{ end }}

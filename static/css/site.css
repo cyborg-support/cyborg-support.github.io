@@ -54,10 +54,15 @@
 
 html {
   font-size: var(--site-font-size);
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: var(--site-text);
+  background-color: white;
+  background-image: radial-gradient(circle, #ccc 1px, transparent 1px);
+  background-size: 15px 15px;
+  background-attachment: fixed;
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;

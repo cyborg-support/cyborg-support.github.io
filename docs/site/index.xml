@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Site Guides on Cyborg Support</title>
+    <link>https://cyborg-support.github.io/site/</link>
+    <description>Recent content in Site Guides on Cyborg Support</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 21 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://cyborg-support.github.io/site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hosting: Hugo &#43; GitHub Pages</title>
+      <link>https://cyborg-support.github.io/site/hosting/</link>
+      <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://cyborg-support.github.io/site/hosting/</guid>
+      <description>&lt;p&gt;A complete guide for publishing a Hugo site to GitHub Pages using a local build and a &lt;code&gt;docs/&lt;/code&gt; folder — no GitHub Actions required.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;The deploy method:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Hugo builds locally into &lt;code&gt;docs/&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;docs/&lt;/code&gt; is committed and pushed to GitHub&lt;/li&gt;&#xA;&lt;li&gt;GitHub Pages serves from the &lt;code&gt;docs/&lt;/code&gt; folder on &lt;code&gt;main&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;You control when the site publishes. No pipeline, no waiting for CI.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;1-hugo-config&#34;&gt;1. Hugo config&lt;/h2&gt;&#xA;&lt;p&gt;In &lt;code&gt;hugo.toml&lt;/code&gt;, set the publish directory to &lt;code&gt;docs&lt;/code&gt; and the correct base URL:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+body {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.reveal {
+  font-size: 2rem;
+}
+
+.reveal .slides section {
+  text-align: left;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  text-align: left;
+}

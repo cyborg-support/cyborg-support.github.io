@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Test Presentation | Cyborg Support</title>
+  <link rel="stylesheet" href="/css/site.css" />
+  <link rel="stylesheet" href="/css/reveal.css" />
+  <link rel="stylesheet" href="/css/slide.css" />
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-markdown data-separator="^\n---\n" data-separator-vertical="^\n--\n" data-separator-notes="^Note:">
+        <textarea data-template id="slide-raw"></textarea>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const b64 = "CiMjIFNsaWRlIDEKCldlbGNvbWUgdG8gdGhlIGN5Ym9yZy1zdXBwb3J0IHNwcmluZ2JvYXJkLgoKLS0tCgojIyBTbGlkZSAyCgpVc2UgYC0tLWAgdG8gc2VwYXJhdGUgc2xpZGVzLgoKLSBidWxsZXQgb25lCi0gYnVsbGV0IHR3bwotIGJ1bGxldCB0aHJlZQoKLS0tCgojIyBTbGlkZSAzCgpgYGBiYXNoCmh1Z28KZ2l0IGFkZCBkb2NzLwpnaXQgY29tbWl0IC1tICJwdWJsaXNoIgpnaXQgcHVzaCBvcmlnaW4gbWFpbgpgYGAKCi0tLQoKIyMgRG9uZQo=";
+      const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
+      document.getElementById('slide-raw').textContent = new TextDecoder().decode(bytes);
+    })();
+  </script>
+
+  <script src="/js/reveal.js"></script>
+  <script src="/js/plugin/markdown/markdown.js"></script>
+  <script src="/js/plugin/highlight/highlight.js"></script>
+  <script src="/js/plugin/notes/notes.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      transition: 'fade',
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+
+  </script>
+</body>
+</html>

@@ -2,20 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cyborg-support.github.io/</loc>
+    <loc>https://cyborg.support/</loc>
     <lastmod>2026-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cyborg-support.github.io/site/hosting/</loc>
+    <loc>https://cyborg.support/site/hosting/</loc>
     <lastmod>2026-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cyborg-support.github.io/site/</loc>
+    <loc>https://cyborg.support/site/</loc>
     <lastmod>2026-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cyborg-support.github.io/test-slides/</loc>
+    <loc>https://cyborg.support/site/slides/</loc>
     <lastmod>2026-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cyborg-support.github.io/categories/</loc>
+    <loc>https://cyborg.support/categories/</loc>
   </url><url>
-    <loc>https://cyborg-support.github.io/tags/</loc>
+    <loc>https://cyborg.support/tags/</loc>
   </url>
 </urlset>

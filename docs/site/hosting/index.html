@@ -4,26 +4,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hosting: Hugo &#43; GitHub Pages | Cyborg Support</title>
-  <style>
-    body { font-family: system-ui, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #222; }
-    h1, h2, h3 { line-height: 1.2; }
-    pre { background: #f4f4f4; padding: 1rem; overflow-x: auto; border-radius: 4px; }
-    code { background: #f4f4f4; padding: .1em .3em; border-radius: 3px; }
-    pre code { background: none; padding: 0; }
-    table { border-collapse: collapse; width: 100%; }
-    th, td { border: 1px solid #ddd; padding: .5rem 1rem; text-align: left; }
-    th { background: #f4f4f4; }
-    a { color: #0066cc; }
-    hr { border: none; border-top: 1px solid #ddd; margin: 2rem 0; }
-    nav { margin-bottom: 2rem; }
-  </style>
+  <link rel="stylesheet" href="/css/site.css" />
+  <link rel="stylesheet" href="/css/mermaid.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script src="/js/site.js"></script>
+  <script src="/js/toc.js"></script>
 </head>
 <body>
   <nav><a href="/">Cyborg Support</a></nav>
   
   <h1>Hosting: Hugo &#43; GitHub Pages</h1>
   <p><time>April 21, 2026</time></p>
-  <p>A complete guide for publishing a Hugo site to GitHub Pages using a local build and a <code>docs/</code> folder — no GitHub Actions required.</p>
+  
+  <div class="page-layout">
+    <aside class="toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#hugo-config">Hugo config</a></li>
+    <li><a href="#build-the-site">Build the site</a></li>
+    <li><a href="#create-the-github-repo">Create the GitHub repo</a></li>
+    <li><a href="#activate-github-pages">Activate GitHub Pages</a></li>
+    <li><a href="#cname">CNAME</a></li>
+    <li><a href="#check-gitignore">Check .gitignore</a></li>
+    <li><a href="#deploy">Deploy</a></li>
+    <li><a href="#summary">Summary</a></li>
+  </ul>
+</nav></aside>
+    <article><div class="mermaid">flowchart LR
+    A[hugo build] --> B[docs/]
+    B --> C[git push]
+    C --> D[GitHub Pages]</div>
+<p>A complete guide for publishing a Hugo site to GitHub Pages using a local build and a <code>docs/</code> folder — no GitHub Actions required.</p>
 <hr>
 <h2 id="overview">Overview</h2>
 <p>The deploy method:</p>
@@ -34,23 +45,23 @@
 </ol>
 <p>You control when the site publishes. No pipeline, no waiting for CI.</p>
 <hr>
-<h2 id="1-hugo-config">1. Hugo config</h2>
+<h2 id="hugo-config">Hugo config</h2>
 <p>In <code>hugo.toml</code>, set the publish directory to <code>docs</code> and the correct base URL:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#39;https://username.github.io/&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#39;en-us&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#39;My Site&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">publishDir</span> = <span style="color:#e6db74">&#39;docs&#39;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s1">&#39;https://username.github.io/&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">languageCode</span> <span class="p">=</span> <span class="s1">&#39;en-us&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;My Site&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">publishDir</span> <span class="p">=</span> <span class="s1">&#39;docs&#39;</span>
 </span></span></code></pre></div><p>If you have a custom domain, use that as the base URL instead:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">baseURL</span> = <span style="color:#e6db74">&#39;https://yourdomain.com/&#39;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">baseURL</span> <span class="p">=</span> <span class="s1">&#39;https://yourdomain.com/&#39;</span>
 </span></span></code></pre></div><hr>
-<h2 id="2-build-the-site">2. Build the site</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo
+<h2 id="build-the-site">Build the site</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo
 </span></span></code></pre></div><p>This writes all output into <code>docs/</code>. Commit everything including <code>docs/</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git add docs/
-</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;publish&#34;</span>
-</span></span><span style="display:flex;"><span>git push origin main
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git add docs/
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;publish&#34;</span>
+</span></span><span class="line"><span class="cl">git push origin main
 </span></span></code></pre></div><hr>
-<h2 id="3-create-the-github-repo">3. Create the GitHub repo</h2>
+<h2 id="create-the-github-repo">Create the GitHub repo</h2>
 <p>For a <strong>root site</strong> served at <code>username.github.io</code>:</p>
 <ul>
 <li>Repo name must be exactly <code>username.github.io</code></li>
@@ -64,7 +75,7 @@
 <li>Set <code>baseURL = 'https://username.github.io/my-project/'</code> in <code>hugo.toml</code></li>
 </ul>
 <hr>
-<h2 id="4-activate-github-pages-docs-folder-method">4. Activate GitHub Pages (docs folder method)</h2>
+<h2 id="activate-github-pages">Activate GitHub Pages</h2>
 <ol>
 <li>Go to the repo on GitHub</li>
 <li>Settings &gt; Pages</li>
@@ -74,7 +85,7 @@
 </ol>
 <p>GitHub Pages will serve from <code>docs/</code> on every push to <code>main</code>. No workflow file needed.</p>
 <hr>
-<h2 id="5-custom-domain-cname">5. Custom domain (CNAME)</h2>
+<h2 id="cname">CNAME</h2>
 <h3 id="cname-file-in-the-repo">CNAME file in the repo</h3>
 <p>Create <code>static/CNAME</code> — Hugo copies it to <code>docs/CNAME</code> on every build:</p>
 <pre tabindex="0"><code>yourdomain.com
@@ -94,15 +105,15 @@
 </code></pre><p>For <code>www</code>, add a CNAME record:</p>
 <pre tabindex="0"><code>www  CNAME  username.github.io
 </code></pre><hr>
-<h2 id="6-check-gitignore">6. Check .gitignore</h2>
+<h2 id="check-gitignore">Check .gitignore</h2>
 <p>Make sure <code>docs/</code> is not ignored. Hugo&rsquo;s default sometimes adds <code>public/</code> — since you renamed it to <code>docs/</code>, that should be fine, but verify:</p>
 <pre tabindex="0"><code class="language-gitignore" data-lang="gitignore"># public/   &lt;- fine, you&#39;re using docs/ not public/
 </code></pre><hr>
-<h2 id="7-deploy-manual">7. Deploy (manual)</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo                    <span style="color:#75715e"># build into docs/</span>
-</span></span><span style="display:flex;"><span>git add docs/
-</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;publish&#34;</span>
-</span></span><span style="display:flex;"><span>git push origin main    <span style="color:#75715e"># GitHub Pages updates within ~1 min</span>
+<h2 id="deploy">Deploy</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo                    <span class="c1"># build into docs/</span>
+</span></span><span class="line"><span class="cl">git add docs/
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;publish&#34;</span>
+</span></span><span class="line"><span class="cl">git push origin main    <span class="c1"># GitHub Pages updates within ~1 min</span>
 </span></span></code></pre></div><hr>
 <h2 id="summary">Summary</h2>
 <table>
@@ -143,7 +154,9 @@
       </tr>
   </tbody>
 </table>
-
+</article>
+  </div>
+  
 
 </body>
 </html>

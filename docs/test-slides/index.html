@@ -1,58 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-  <title>Test Presentation | Cyborg Support</title>
-  <link rel="stylesheet" href="/css/reveal/reveal.css" />
-  <style>
-    body { margin: 0; background: #111; }
-    .reveal { font-family: system-ui, sans-serif; }
-    .reveal h1, .reveal h2, .reveal h3 { text-transform: none; }
-    .slide-actions { position: fixed; bottom: 1rem; right: 1rem; z-index: 100; }
-    .slide-action-btn { background: rgba(255,255,255,0.15); color: #fff; border: none; padding: .4rem .8rem; border-radius: 4px; cursor: pointer; font-size: .85rem; }
-    .slide-action-btn:hover { background: rgba(255,255,255,0.3); }
-  </style>
-</head>
-<body>
-  <div class="reveal">
-    <div class="slides">
-      <section data-markdown data-separator="^\n---\n" data-separator-vertical="^\n--\n" data-separator-notes="^Note:">
-        <textarea data-template id="slide-raw"></textarea>
-      </section>
-    </div>
-  </div>
-
-  <div class="slide-actions">
-    <button class="slide-action-btn" onclick="toggleFullscreen()">Fullscreen</button>
-  </div>
-
-  <script>
-    (function() {
-      const b64 = "CiMjIFNsaWRlIDEKCldlbGNvbWUgdG8gdGhlIGN5Ym9yZy1zdXBwb3J0IHNwcmluZ2JvYXJkLgoKLS0tCgojIyBTbGlkZSAyCgpVc2UgYC0tLWAgdG8gc2VwYXJhdGUgc2xpZGVzLgoKLSBidWxsZXQgb25lCi0gYnVsbGV0IHR3bwotIGJ1bGxldCB0aHJlZQoKLS0tCgojIyBTbGlkZSAzCgpgYGBiYXNoCmh1Z28KZ2l0IGFkZCBkb2NzLwpnaXQgY29tbWl0IC1tICJwdWJsaXNoIgpnaXQgcHVzaCBvcmlnaW4gbWFpbgpgYGAKCi0tLQoKIyMgRG9uZQo=";
-      const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
-      document.getElementById('slide-raw').textContent = new TextDecoder().decode(bytes);
-    })();
-  </script>
-
-  <script src="/js/reveal/reveal.js"></script>
-  <script src="/js/reveal/plugin/markdown/markdown.js"></script>
-  <script src="/js/reveal/plugin/highlight/highlight.js"></script>
-  <script src="/js/reveal/plugin/notes/notes.js"></script>
-  <script>
-    Reveal.initialize({
-      hash: true,
-      transition: 'fade',
-      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-    });
-
-    function toggleFullscreen() {
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen();
-      } else {
-        document.exitFullscreen();
-      }
-    }
-  </script>
-</body>
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>https://cyborg.support/site/slides/</title>
+    <link rel="canonical" href="https://cyborg.support/site/slides/">
+    <meta charset="utf-8">
+    <meta http-equiv="refresh" content="0; url=https://cyborg.support/site/slides/">
+  </head>
 </html>

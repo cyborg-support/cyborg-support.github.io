@@ -1,0 +1,13 @@
+/* === MERMAID DIAGRAM STYLES === */
+
+/* Node labels */
+.mermaid svg .label,
+.mermaid svg text,
+.mermaid svg span {
+  font-family: 'SiteText', monospace !important;
+}
+
+/* Edge labels */
+.mermaid svg .edgeLabel {
+  font-family: 'SiteText', monospace !important;
+}

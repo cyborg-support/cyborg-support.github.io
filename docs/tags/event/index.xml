@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Event on Cyborg Support</title>
+    <link>https://cyborg.support/tags/event/</link>
+    <description>Recent content in Event on Cyborg Support</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 22 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://cyborg.support/tags/event/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Event Frontmatter Spec</title>
+      <link>https://cyborg.support/site/event/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://cyborg.support/site/event/</guid>
+      <description>&lt;p&gt;Any post on this site can become a calendar event by adding &lt;code&gt;tags = [&#39;event&#39;]&lt;/code&gt; and the required frontmatter below.&lt;/p&gt;&#xA;&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Event partial&lt;/strong&gt; — rendered at the top of the page with &amp;ldquo;Download event&amp;rdquo; and &amp;ldquo;Subscribe to calendar&amp;rdquo; buttons; location is linked if a URL&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Per-event &lt;code&gt;.ics&lt;/code&gt;&lt;/strong&gt; — generated at build time, downloadable at &lt;code&gt;/{page-path}/event.ics&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Main calendar feed&lt;/strong&gt; — &lt;code&gt;https://cyborg.support/event.ics&lt;/code&gt; aggregates all events; subscribe once in Apple Calendar, Google Calendar, or any iCal client and get all future events automatically&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;required&#34;&gt;Required&lt;/h2&gt;&#xA;&lt;p&gt;These fields are needed to generate a valid &lt;code&gt;.ics&lt;/code&gt; entry.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Office Hours — May 10</title>
+      <link>https://cyborg.support/site/office-hours-may-10/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://cyborg.support/site/office-hours-may-10/</guid>
+      <description>&lt;p&gt;Monthly open session for questions, troubleshooting, and live demos of OpenClaw workflows. Bring your setup, your questions, and your curiosity.&lt;/p&gt;&#xA;&lt;p&gt;No registration required. Join the Zoom link above at the scheduled time.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

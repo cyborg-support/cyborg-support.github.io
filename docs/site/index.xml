@@ -6,8 +6,22 @@
     <description>Recent content in Site Guides on Cyborg Support</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 21 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://cyborg.support/site/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Event Frontmatter Spec</title>
+      <link>https://cyborg.support/site/event/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://cyborg.support/site/event/</guid>
+      <description>&lt;p&gt;Any post on this site can become a calendar event by adding &lt;code&gt;tags = [&#39;event&#39;]&lt;/code&gt; and the required frontmatter below.&lt;/p&gt;&#xA;&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Event partial&lt;/strong&gt; — rendered at the top of the page with &amp;ldquo;Download event&amp;rdquo; and &amp;ldquo;Subscribe to calendar&amp;rdquo; buttons; location is linked if a URL&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Per-event &lt;code&gt;.ics&lt;/code&gt;&lt;/strong&gt; — generated at build time, downloadable at &lt;code&gt;/{page-path}/event.ics&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Main calendar feed&lt;/strong&gt; — &lt;code&gt;https://cyborg.support/event.ics&lt;/code&gt; aggregates all events; subscribe once in Apple Calendar, Google Calendar, or any iCal client and get all future events automatically&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;required&#34;&gt;Required&lt;/h2&gt;&#xA;&lt;p&gt;These fields are needed to generate a valid &lt;code&gt;.ics&lt;/code&gt; entry.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Office Hours — May 10</title>
+      <link>https://cyborg.support/site/office-hours-may-10/</link>
+      <pubDate>Wed, 22 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://cyborg.support/site/office-hours-may-10/</guid>
+      <description>&lt;p&gt;Monthly open session for questions, troubleshooting, and live demos of OpenClaw workflows. Bring your setup, your questions, and your curiosity.&lt;/p&gt;&#xA;&lt;p&gt;No registration required. Join the Zoom link above at the scheduled time.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Hosting: Hugo &#43; GitHub Pages</title>
       <link>https://cyborg.support/site/hosting/</link>
@@ -27,7 +41,7 @@
       <link>https://cyborg.support/site/slides/</link>
       <pubDate>Tue, 21 Apr 2026 00:00:00 +0000</pubDate>
       <guid>https://cyborg.support/site/slides/</guid>
-      <description>&lt;h2 id=&#34;slide-1&#34;&gt;Slide 1&lt;/h2&gt;&#xA;&lt;p&gt;Welcome to the cyborg-support springboard.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;slide-2&#34;&gt;Slide 2&lt;/h2&gt;&#xA;&lt;p&gt;Use &lt;code&gt;---&lt;/code&gt; to separate slides.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;bullet one&lt;/li&gt;&#xA;&lt;li&gt;bullet two&lt;/li&gt;&#xA;&lt;li&gt;bullet three&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;slide-3&#34;&gt;Slide 3&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add docs/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;publish&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin main&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;done&#34;&gt;Done&lt;/h2&gt;</description>
+      <description>&lt;h2 id=&#34;slide-1&#34;&gt;Slide 1&lt;/h2&gt;&#xA;&lt;p&gt;Welcome to the cyborg-support springboard.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;slide-2&#34;&gt;Slide 2&lt;/h2&gt;&#xA;&lt;p&gt;Use &lt;code&gt;---&lt;/code&gt; to separate slides.&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;bullet one&lt;/li&gt;&#xA;&lt;li&gt;bullet two&lt;/li&gt;&#xA;&lt;li&gt;bullet three&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;slide-3&#34;&gt;Slide 3&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hugo&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git add docs/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git commit -m &lt;span class=&#34;s2&#34;&gt;&amp;#34;publish&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;git push origin main&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;&#xA;&lt;h2 id=&#34;mermaid&#34;&gt;Mermaid&lt;/h2&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;done&#34;&gt;Done&lt;/h2&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Frontmatter Spec | Cyborg Support</title>
+  <link rel="stylesheet" href="/css/site.css?v=1777437517" />
+  <link rel="stylesheet" href="/css/mermaid.css?v=1777437517" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script src="/js/site.js"></script>
+  <script src="/js/toc.js"></script>
+</head>
+<body>
+  <nav><a href="/">Cyborg Support</a></nav>
+  
+  <h1>Event Frontmatter Spec</h1>
+  
+
+<div class="event-actions">
+  <a class="btn" href="/site/event.ics" download>Download event</a>
+  <a class="btn" href="webcal://cyborg.support/event.ics">Subscribe to calendar</a>
+  
+  <div class="event-location">
+    
+      <a href="https://zoom.us/j/cyborg-support">https://zoom.us/j/cyborg-support</a>
+    
+  </div>
+  
+</div>
+
+
+  
+  <div class="page-layout">
+    <aside class="toc"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#results">Results</a></li>
+    <li><a href="#required">Required</a></li>
+    <li><a href="#optional">Optional</a></li>
+    <li><a href="#auto-derived">Auto-derived</a></li>
+    <li><a href="#example">Example</a></li>
+  </ul>
+</nav></aside>
+    <article><p>Any post on this site can become a calendar event by adding <code>tags = ['event']</code> and the required frontmatter below.</p>
+<h2 id="results">Results</h2>
+<ul>
+<li><strong>Event partial</strong> — rendered at the top of the page with &ldquo;Download event&rdquo; and &ldquo;Subscribe to calendar&rdquo; buttons; location is linked if a URL</li>
+<li><strong>Per-event <code>.ics</code></strong> — generated at build time, downloadable at <code>/{page-path}/event.ics</code></li>
+<li><strong>Main calendar feed</strong> — <code>https://cyborg.support/event.ics</code> aggregates all events; subscribe once in Apple Calendar, Google Calendar, or any iCal client and get all future events automatically</li>
+</ul>
+<h2 id="required">Required</h2>
+<p>These fields are needed to generate a valid <code>.ics</code> entry.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Example</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>event_start</code></td>
+          <td>RFC 3339 datetime</td>
+          <td><code>2026-05-10T14:00:00-03:00</code></td>
+      </tr>
+      <tr>
+          <td><code>event_end</code></td>
+          <td>RFC 3339 datetime</td>
+          <td><code>2026-05-10T15:30:00-03:00</code></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="optional">Optional</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Field</th>
+          <th>Type</th>
+          <th>Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>event_location</code></td>
+          <td>string</td>
+          <td>URL or physical address — if a URL, the event partial renders it as a link</td>
+      </tr>
+      <tr>
+          <td><code>event_image</code></td>
+          <td>string</td>
+          <td>Absolute URL — used by Apple Calendar</td>
+      </tr>
+      <tr>
+          <td><code>event_rrule</code></td>
+          <td>string</td>
+          <td>iCal RRULE, e.g. <code>FREQ=WEEKLY;BYDAY=TU</code></td>
+      </tr>
+      <tr>
+          <td><code>event_organizer</code></td>
+          <td>string</td>
+          <td>Display name of the organizer</td>
+      </tr>
+  </tbody>
+</table>
+<p>For virtual events, use a full URL in <code>event_location</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">event_location</span> <span class="p">=</span> <span class="s1">&#39;https://zoom.us/j/example&#39;</span>
+</span></span></code></pre></div><p>The partial detects URLs (starts with <code>http</code>) and wraps the location in an <code>&lt;a&gt;</code> tag automatically. Physical addresses are rendered as plain text.</p>
+<h2 id="auto-derived">Auto-derived</h2>
+<p>Hugo fills these automatically — no need to declare them.</p>
+<table>
+  <thead>
+      <tr>
+          <th>iCal field</th>
+          <th>Source</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>SUMMARY</code></td>
+          <td><code>.Title</code></td>
+      </tr>
+      <tr>
+          <td><code>DESCRIPTION</code></td>
+          <td><code>.Summary</code> (first paragraph)</td>
+      </tr>
+      <tr>
+          <td><code>URL</code></td>
+          <td><code>.Permalink</code></td>
+      </tr>
+      <tr>
+          <td><code>UID</code></td>
+          <td><code>.Permalink</code></td>
+      </tr>
+      <tr>
+          <td><code>DTSTAMP</code></td>
+          <td>build time</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="example">Example</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="err">+++</span>
+</span></span><span class="line"><span class="cl"><span class="nx">title</span> <span class="p">=</span> <span class="s1">&#39;Office Hours — May 10&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">date</span> <span class="p">=</span> <span class="s1">&#39;2026-05-01&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">tags</span> <span class="p">=</span> <span class="p">[</span><span class="s1">&#39;event&#39;</span><span class="p">,</span> <span class="s1">&#39;office-hours&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">event_start</span> <span class="p">=</span> <span class="s1">&#39;2026-05-10T14:00:00-03:00&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">event_end</span>   <span class="p">=</span> <span class="s1">&#39;2026-05-10T15:30:00-03:00&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">event_location</span> <span class="p">=</span> <span class="s1">&#39;https://zoom.us/j/example&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">event_image</span>    <span class="p">=</span> <span class="s1">&#39;https://cyborg.support/images/office-hours.jpg&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span>
+</span></span></code></pre></div></article>
+  </div>
+  
+
+</body>
+</html>

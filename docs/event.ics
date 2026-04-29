@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cyborg Support//Hugo//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Cyborg Support
+X-WR-CALDESC:Events from cyborg.support
+BEGIN:VEVENT
+UID:https://cyborg.support/site/event/
+DTSTAMP:20260429T003837Z
+DTSTART:20260506T140000-03:00
+DTEND:20260506T150000-03:00
+SUMMARY:Event Frontmatter Spec
+DESCRIPTION:Any post on this site can become a calendar event by adding tags = ['event'] and the required frontmatter below.\nResults Event partial — rendered at the top of the page with &ldquo;Download event&rdquo; and &ldquo;Subscribe to calendar&rdquo; buttons; location is linked if a URL Per-event .ics — generated at build time, downloadable at /{page-path}/event.ics Main calendar feed — https://cyborg.support/event.ics aggregates all events; subscribe once in Apple Calendar, Google Calendar, or any iCal client and get all future events automatically Required These fields are needed to generate a valid .ics entry.\n
+URL:https://cyborg.support/site/event/
+LOCATION:https://zoom.us/j/cyborg-support
+ORGANIZER;CN=Cyborg Support:MAILTO:noreply@cyborg.support
+END:VEVENT
+BEGIN:VEVENT
+UID:https://cyborg.support/site/office-hours-may-10/
+DTSTAMP:20260429T003837Z
+DTSTART:20260510T140000-03:00
+DTEND:20260510T153000-03:00
+SUMMARY:Office Hours — May 10
+DESCRIPTION:Monthly open session for questions, troubleshooting, and live demos of OpenClaw workflows. Bring your setup, your questions, and your curiosity.\nNo registration required. Join the Zoom link above at the scheduled time.\n
+URL:https://cyborg.support/site/office-hours-may-10/
+LOCATION:https://zoom.us/j/cyborg-support
+IMAGE;VALUE=URI:https://cyborg.support/images/office-hours.jpg
+ORGANIZER;CN=Cyborg Support:MAILTO:noreply@cyborg.support
+END:VEVENT
+END:VCALENDAR

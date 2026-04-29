@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="/css/site.css" />
   <link rel="stylesheet" href="/css/reveal.css" />
   <link rel="stylesheet" href="/css/slide.css" />
+  <link rel="stylesheet" href="/css/mermaid.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 </head>
 <body>
   <div class="reveal">
@@ -19,7 +21,7 @@
 
   <script>
     (function() {
-      const b64 = "CiMjIFNsaWRlIDEKCldlbGNvbWUgdG8gdGhlIGN5Ym9yZy1zdXBwb3J0IHNwcmluZ2JvYXJkLgoKLS0tCgojIyBTbGlkZSAyCgpVc2UgYC0tLWAgdG8gc2VwYXJhdGUgc2xpZGVzLgoKLSBidWxsZXQgb25lCi0gYnVsbGV0IHR3bwotIGJ1bGxldCB0aHJlZQoKLS0tCgojIyBTbGlkZSAzCgpgYGBiYXNoCmh1Z28KZ2l0IGFkZCBkb2NzLwpnaXQgY29tbWl0IC1tICJwdWJsaXNoIgpnaXQgcHVzaCBvcmlnaW4gbWFpbgpgYGAKCi0tLQoKIyMgRG9uZQo=";
+      const b64 = "CiMjIFNsaWRlIDEKCldlbGNvbWUgdG8gdGhlIGN5Ym9yZy1zdXBwb3J0IHNwcmluZ2JvYXJkLgoKLS0tCgojIyBTbGlkZSAyCgpVc2UgYC0tLWAgdG8gc2VwYXJhdGUgc2xpZGVzLgoKLSBidWxsZXQgb25lCi0gYnVsbGV0IHR3bwotIGJ1bGxldCB0aHJlZQoKLS0tCgojIyBTbGlkZSAzCgpgYGBiYXNoCmh1Z28KZ2l0IGFkZCBkb2NzLwpnaXQgY29tbWl0IC1tICJwdWJsaXNoIgpnaXQgcHVzaCBvcmlnaW4gbWFpbgpgYGAKCi0tLQoKIyMgTWVybWFpZAoKPGRpdiBjbGFzcz0ibWVybWFpZCI\u002bCmZsb3djaGFydCBMUgogICAgQVt3cml0ZSBjb250ZW50XSAtLT4gQltodWdvIGJ1aWxkXQogICAgQiAtLT4gQ1tnaXQgcHVzaF0KICAgIEMgLS0\u002bIERbbGl2ZSBzaXRlXQo8L2Rpdj4KCi0tLQoKIyMgRG9uZQo=";
       const bytes = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
       document.getElementById('slide-raw').textContent = new TextDecoder().decode(bytes);
     })();
@@ -34,6 +36,15 @@
       hash: true,
       transition: 'fade',
       plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+
+    Reveal.on('ready', () => {
+      mermaid.initialize({ startOnLoad: false, theme: 'default' });
+      mermaid.run({ querySelector: '.mermaid' });
+    });
+
+    Reveal.on('slidechanged', () => {
+      mermaid.run({ querySelector: '.mermaid' });
     });
 
   </script>

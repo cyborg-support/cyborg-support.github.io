@@ -1,0 +1,18 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cyborg Support//Hugo//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:https://cyborg.support/site/office-hours-may-10/
+DTSTAMP:20260429T003837Z
+DTSTART:20260510T140000-03:00
+DTEND:20260510T153000-03:00
+SUMMARY:Office Hours — May 10
+DESCRIPTION:Monthly open session for questions, troubleshooting, and live demos of OpenClaw workflows. Bring your setup, your questions, and your curiosity.\nNo registration required. Join the Zoom link above at the scheduled time.\n
+URL:https://cyborg.support/site/office-hours-may-10/
+LOCATION:https://zoom.us/j/cyborg-support
+IMAGE;VALUE=URI:https://cyborg.support/images/office-hours.jpg
+ORGANIZER;CN=Cyborg Support:MAILTO:noreply@cyborg.support
+END:VEVENT
+END:VCALENDAR

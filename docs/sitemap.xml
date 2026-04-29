@@ -3,7 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://cyborg.support/</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
+    <lastmod>2026-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cyborg.support/study/identity/</loc>
+    <lastmod>2026-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cyborg.support/study/</loc>
+    <lastmod>2026-04-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cyborg.support/tags/event/</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cyborg.support/site/event/</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cyborg.support/site/office-hours-may-10/</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cyborg.support/tags/office-hours/</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cyborg.support/site/</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://cyborg.support/tags/</loc>
+    <lastmod>2026-04-22T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cyborg.support/site/hosting/</loc>
     <lastmod>2026-04-21T00:00:00+00:00</lastmod>
@@ -11,14 +35,9 @@
     <loc>https://cyborg.support/site/aliases/</loc>
     <lastmod>2026-04-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://cyborg.support/site/</loc>
-    <lastmod>2026-04-21T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://cyborg.support/site/slides/</loc>
     <lastmod>2026-04-21T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://cyborg.support/categories/</loc>
-  </url><url>
-    <loc>https://cyborg.support/tags/</loc>
   </url>
 </urlset>

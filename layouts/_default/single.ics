@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Cyborg Support//Hugo//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+{{ if and (isset .Params "event_start") (in .Params.tags "event") -}}
+BEGIN:VEVENT
+UID:{{ .Permalink }}
+DTSTAMP:{{ now.Format "20060102T150405Z" }}
+DTSTART:{{ dateFormat "20060102T150405Z07:00" .Params.event_start }}
+DTEND:{{ dateFormat "20060102T150405Z07:00" .Params.event_end }}
+SUMMARY:{{ .Title }}
+DESCRIPTION:{{ .Summary | plainify | replaceRE "\n" "\\n" }}
+URL:{{ .Permalink }}
+{{ with .Params.event_location -}}
+LOCATION:{{ . }}
+{{ end -}}
+{{ with .Params.event_image -}}
+IMAGE;VALUE=URI:{{ . }}
+{{ end -}}
+{{ with .Params.event_organizer -}}
+ORGANIZER;CN={{ . }}:MAILTO:noreply@cyborg.support
+{{ end -}}
+{{ with .Params.event_rrule -}}
+RRULE:{{ . }}
+{{ end -}}
+END:VEVENT
+{{ end -}}
+END:VCALENDAR

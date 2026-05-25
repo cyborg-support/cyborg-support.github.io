@@ -1,0 +1,16 @@
+{{ if and (isset .Params "event_start") (in .Params.tags "event") }}
+{{ $ics := .OutputFormats.Get "ICS" }}
+<div class="event-actions">
+  {{ with $ics }}<a class="btn" href="{{ .RelPermalink }}" download>Download event</a>{{ end }}
+  <a class="btn" href="webcal://cyborg.support/event.ics">Subscribe to calendar</a>
+  {{ with .Params.event_location }}
+  <div class="event-location">
+    {{ if hasPrefix . "http" }}
+      <a href="{{ . }}">{{ . }}</a>
+    {{ else }}
+      {{ . }}
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+{{ end }}

@@ -1,0 +1,162 @@
+[
+  {
+    "title": "Assemblage",
+    "type": "Mage: Chantry",
+    "description": "A heterogeneous collection of components that maintain their individual properties while forming a functional whole. Unlike organic wholes where parts lose autonomy, assemblages allow components to be detached and plugged into different assemblages. Examples include cities, ecosystems, and institutions—each composed of distinct elements (human, material, semiotic) interacting without merging into unity.",
+    "RPG_description": "**Chantry of the Severed Threads** (Mage: The Ascension) — A sanctum where mages of incompatible Traditions coexist without merging paradigms. Each maintains their gnosis (Hermetic, Verbena, Virtual Adept) while the Node itself amplifies collective workings. Members can leave and join other Chantries without losing power. The building's wards are maintained not by unified belief but by interlocking yet autonomous ritual geometries.",
+    "relatesTo": [
+      {
+        "concept": "Stratification",
+        "how": "Assemblages exist within strata (geological, biological, social) and draw resources from multiple stratified layers"
+      },
+      {
+        "concept": "Intensive Properties",
+        "how": "Assemblages emerge from intensive differences (temperature gradients, population densities) that drive morphogenesis"
+      }
+    ]
+  },
+  {
+    "title": "Morphogenesis",
+    "type": "Changeling: Unleashing (Cantrip)",
+    "description": "The process by which form emerges from formless matter through self-organization driven by intensive differences. Not imposed from outside by a blueprint or design, but generated endogenously through nonlinear dynamics, symmetry-breaking, and phase transitions. Examples: crystal formation, embryological development, urban growth—all exhibit spontaneous pattern formation.",
+    "RPG_description": "**Chimera Sculpting** (Changeling: The Dreaming) — Sphere: Primal ●●●●. The changeling does not impose form onto raw Glamour but cultivates gradients (hope/despair, heat/cold, memory/forgetting) until the Dreaming itself crystallizes into chimerical structures. No blueprints exist; each chimera is unique, born from symmetry-breaking in the Near Dreaming. A castle grown this way has no architect—only initial conditions and feedback loops.",
+    "relatesTo": [
+      {
+        "concept": "Virtual/Actual",
+        "how": "The virtual contains morphogenetic potentials that actualize into specific forms through symmetry-breaking events"
+      },
+      {
+        "concept": "Intensive Properties",
+        "how": "Intensive gradients (pressure, temperature, chemical potential) are the engines of morphogenesis"
+      }
+    ]
+  },
+  {
+    "title": "Stratification",
+    "type": "Wraith: Hierarchy",
+    "description": "The hierarchical layering of reality into relatively stable plateaus (geological strata, species, languages, institutions) formed through historical processes of sedimentation and consolidation. Each stratum constrains what can emerge at higher levels while remaining partially independent. Not a rigid hierarchy but a sedimentary accumulation where layers can interpenetrate.",
+    "RPG_description": "**The Shadowlands' Seven Strata** (Wraith: The Oblivion) — Stygia's bureaucracy mirrors geological sedimentation: each Deathlord's domain is a stratum formed from consolidated fetters, passions, and necromantic edicts. Lower strata (ancient Romans, plague victims) constrain but don't determine upper layers (modern ghosts). Strata interpenetrate at Nihils—cracks where a contemporary wraith can access Carthaginian Arcanos or vice versa. The Hierarchy isn't ontological law but historical accumulation.",
+    "relatesTo": [
+      {
+        "concept": "Assemblage",
+        "how": "Assemblages operate across multiple strata, extracting resources and constraints from different layers"
+      },
+      {
+        "concept": "Morphogenesis",
+        "how": "New strata form through morphogenetic processes that stabilize previously fluid dynamics into durable forms"
+      }
+    ]
+  },
+  {
+    "title": "Intensive Properties",
+    "type": "Mage: Quintessence Gradient (Prime)",
+    "description": "Properties defined by differences or gradients (temperature, pressure, density, speed) rather than extensive quantities. Intensive differences drive processes—heat flows from hot to cold, fluids move from high to low pressure. Cannot be divided without changing their nature (cutting a hot object in half doesn't yield two objects at the same temperature).",
+    "RPG_description": "**Prime ●●: Sense Quintessence** — Mages perceive reality as gradients: a Node pulses with high Avatar resonance, Banal zones are quintessence-starved wastelands. Effects don't occur from sheer quantity of Tass but from differences—channeling Quintessence from a Node (high) into a mundane object (low) reshapes Pattern. Splitting a charged Talisman doesn't yield two half-charged items; the resonance gradient dissipates entirely. Only differences generate magic.",
+    "relatesTo": [
+      {
+        "concept": "Extensive Properties",
+        "how": "Intensive differences actualize into extensive magnitudes (a temperature gradient drives heat flow measured in joules)"
+      },
+      {
+        "concept": "Morphogenesis",
+        "how": "All morphogenetic processes are driven by intensive differences that break symmetry and generate form"
+      }
+    ]
+  },
+  {
+    "title": "Extensive Properties",
+    "type": "Vampire: Blood Pool (Resource)",
+    "description": "Additive, measurable quantities (length, volume, mass, energy) that scale linearly. Cutting an object in half yields two objects each with half the original mass. Extensive properties are what we typically measure and count, but they are actualized outcomes of intensive processes, not causal agents themselves.",
+    "RPG_description": "**Blood Pool** (Vampire: The Masquerade) — A vampire's vitae is extensive: draining 5 points leaves 5 remaining, perfectly divisible. But the Blood Pool itself is the *outcome* of intensive processes—the Beast's hunger (high) seeking vessels (low), generational potency gradients (3rd gen vs 13th gen). You spend blood points (extensive), but the Curse operates through thirst differentials (intensive). The pool measures results, not causes.",
+    "relatesTo": [
+      {
+        "concept": "Intensive Properties",
+        "how": "Extensive magnitudes are the actualized, measurable effects of intensive differences"
+      },
+      {
+        "concept": "Virtual/Actual",
+        "how": "The actual consists of extensive, fully determined states; the virtual is the intensive realm of tendencies"
+      }
+    ]
+  },
+  {
+    "title": "Virtual/Actual",
+    "type": "Mage: Quiet / Paradox Realm",
+    "description": "The virtual is the realm of unactualized potentials, tendencies, and singularities—not possible (which is the opposite of real) but real yet non-actual. The actual is the set of fully determined, extensive states at any moment. Actualization is the process by which virtual potentials become extensive realities through symmetry-breaking and differentiation.",
+    "RPG_description": "**Paradox Realm** (Mage: The Ascension) — When hubris shatters consensual reality, mages enter the Virtual: a realm of real-but-non-actual potentials. Each Realm is structured by the mage's unresolved Avatar contradictions (singularities). Actualization occurs when the mage confronts a symbolic trial—choosing one path among infinite virtuals collapses the waveform. Exit means accepting that most potentials remain forever virtual. Quiet is living inside unactualized infinity.",
+    "relatesTo": [
+      {
+        "concept": "Morphogenesis",
+        "how": "Actualization is the morphogenetic process by which virtual singularities generate actual forms"
+      },
+      {
+        "concept": "Phase Space",
+        "how": "Phase space maps virtual potentials (attractors, bifurcations) that structure actual trajectories"
+      }
+    ]
+  },
+  {
+    "title": "Phase Space",
+    "type": "Mage: Umbrood Realm (Horizon Realm)",
+    "description": "A multidimensional space representing all possible states of a dynamical system. Each point is a complete state; trajectories trace evolution over time. Attractors (fixed points, limit cycles, strange attractors) structure the space, determining long-term behavior regardless of initial conditions. Used to model everything from pendulums to ecosystems to economies.",
+    "RPG_description": "**Mechanistic Horizon Realm** (Mage: The Ascension, Sons of Ether) — A pocket dimension where every possible configuration of a clockwork universe is mapped as a point in infinite-dimensional phase space. Trajectories (timelines) spiral toward attractors: some worlds stabilize (fixed points), others loop eternally (limit cycles), a few descend into chaotic strange attractors. Visitors navigate by adjusting initial conditions, watching futures branch and collapse.",
+    "relatesTo": [
+      {
+        "concept": "Virtual/Actual",
+        "how": "Phase space contains the virtual structure (attractors) that governs actual state trajectories"
+      },
+      {
+        "concept": "Morphogenesis",
+        "how": "Bifurcations in phase space mark points where morphogenetic processes generate new forms"
+      }
+    ]
+  },
+  {
+    "title": "Singularities",
+    "type": "Werewolf: Threshold (Rite)",
+    "description": "Critical points where a system's behavior changes qualitatively—bifurcations, phase transitions, symmetry breaks. Not statistical averages but unique events that structure possibility spaces. Examples: the boiling point of water, the critical mass for nuclear fission, the tipping point in social dynamics. Singularities define the virtual.",
+    "RPG_description": "**Rite of the Opened Caern** (Werewolf: The Apocalypse) — A ritual performed at Gaia-nodes where Gauntlet thickness hits critical singularity. Not gradual weakening but a phase transition: below threshold, spirits cannot cross; at threshold, the Caern rips open. The Rite doesn't create the singularity—it identifies and triggers it. Once opened, the Caern's phase-state irreversibly shifts from dormant to active. Miss the singularity by one Gnosis point and nothing happens.",
+    "relatesTo": [
+      {
+        "concept": "Virtual/Actual",
+        "how": "Singularities are the virtual events that, when actualized, produce qualitative transformations"
+      },
+      {
+        "concept": "Phase Space",
+        "how": "Singularities appear as bifurcation points where phase space structure changes"
+      }
+    ]
+  },
+  {
+    "title": "Emergence",
+    "type": "Vampire: Gestalt Consciousness (Koldunic Sorcery)",
+    "description": "Properties or behaviors of a whole that cannot be reduced to properties of parts—not because of mysterious holism but because interactions between components generate qualitatively new capacities. Examples: liquidity emerges from H₂O molecules, consciousness from neurons, institutions from individuals. Emergence is morphogenetic, not teleological.",
+    "RPG_description": "**Kupala's Hivemind** (Vampire: Dark Ages, Tzimisce) — When Tzimisce Koldun link via blood-soil bonds, a gestalt consciousness emerges that exceeds any individual Methuselah's cunning. Not telepathy (mere information transfer) but emergent strategy—the network generates insights no single node could compute. Destroying one Koldun doesn't proportionally weaken the whole; emergence is nonlinear. The hive thinks in patterns inaccessible to solo vampires.",
+    "relatesTo": [
+      {
+        "concept": "Assemblage",
+        "how": "Assemblages exhibit emergent properties that exceed the sum of component capacities"
+      },
+      {
+        "concept": "Morphogenesis",
+        "how": "Emergence is the outcome of morphogenetic processes where interactions generate novel forms"
+      }
+    ]
+  },
+  {
+    "title": "Heterogenesis",
+    "type": "Changeling: Chrysalis (Transformation)",
+    "description": "The production of genuine novelty and difference, as opposed to mere variation within pre-given categories. Heterogenesis occurs when morphogenetic processes break symmetry and generate forms not contained in initial conditions. Contrasts with development (unfolding what was already implicit) and reproduction (copying existing forms).",
+    "RPG_description": "**The Chrysalis** (Changeling: The Dreaming) — Not reincarnation (reproduction) or maturation (development) but heterogenesis: a human becomes fae through symmetry-breaking contact with raw Glamour. The result is irreducible to either human genes or fae lineage—Seelie/Unseelie, kith, Arts emerge unpredictably. No two Chrysalises yield identical changelings even from the same mortal stock. The Dreaming generates difference, not copies. Banality is the enemy because it enforces sameness.",
+    "relatesTo": [
+      {
+        "concept": "Morphogenesis",
+        "how": "Heterogenesis is morphogenesis that produces irreducible novelty rather than predictable patterns"
+      },
+      {
+        "concept": "Virtual/Actual",
+        "how": "Heterogenesis is actualization that diverges from past actualizations, exploring new regions of the virtual"
+      }
+    ]
+  }
+]

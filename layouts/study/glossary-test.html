@@ -1,0 +1,26 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+<h1>DeLanda Concepts Glossary</h1>
+
+{{ range .Site.Data.glossary }}
+<h2>{{ .title }}</h2>
+
+<p><strong>Type:</strong> {{ .type }}</p>
+
+<h3>Philosophical Description</h3>
+<p>{{ .description }}</p>
+
+<h3>World of Darkness Context</h3>
+<div>{{ .RPG_description | markdownify }}</div>
+
+<p><strong>Related Concepts:</strong></p>
+<ul>
+{{ range .relatesTo }}
+<li><strong>{{ .concept }}</strong>: {{ .how }}</li>
+{{ end }}
+</ul>
+
+<hr>
+{{ end }}
+{{ end }}

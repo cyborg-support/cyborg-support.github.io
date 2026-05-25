@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="/css/site.css" />
   <link rel="stylesheet" href="/css/reveal.css" />
   <link rel="stylesheet" href="/css/slide.css" />
+  <link rel="stylesheet" href="/css/mermaid.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
 </head>
 <body>
   <div class="reveal">
@@ -34,6 +36,15 @@
       hash: true,
       transition: 'fade',
       plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+
+    Reveal.on('ready', () => {
+      mermaid.initialize({ startOnLoad: false, theme: 'default' });
+      mermaid.run({ querySelector: '.mermaid' });
+    });
+
+    Reveal.on('slidechanged', () => {
+      mermaid.run({ querySelector: '.mermaid' });
     });
 
   </script>

@@ -33,4 +33,15 @@ git push origin main
 
 ---
 
+## Mermaid
+
+<div class="mermaid">
+flowchart LR
+    A[write content] --> B[hugo build]
+    B --> C[git push]
+    C --> D[live site]
+</div>
+
+---
+
 ## Done

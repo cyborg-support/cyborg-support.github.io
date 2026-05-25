@@ -4,6 +4,17 @@ title = 'Cyborg Support'
 publishDir = 'docs'
 staticDir = ['static']
 
+[outputFormats.ICS]
+  mediaType = "text/calendar"
+  baseName = "event"
+  rel = "alternate"
+  isPlainText = true
+  notAlternative = false
+
+[outputs]
+  home = ["HTML", "ICS"]
+  page = ["HTML", "ICS"]
+
 [markup.tableOfContents]
   startLevel = 2
   endLevel = 2

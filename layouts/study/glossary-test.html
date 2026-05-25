@@ -4,7 +4,7 @@
 <p><em>Source: {{ (index .Site.Data.glossary 0).author }} — {{ (index .Site.Data.glossary 0).book }}</em></p>
 
 {{ range .Site.Data.glossary }}
-<h2>{{ .title }}</h2>
+<h2 id="{{ .title | urlize }}">{{ .title }}</h2>
 
 <h3>Description</h3>
 <p>{{ .description }}</p>
@@ -12,7 +12,7 @@
 <h3>Related</h3>
 <ul>
 {{ range .relatesTo }}
-<li><strong>{{ .concept }}</strong>: {{ .how }}</li>
+<li><a href="#{{ .concept | urlize }}"><strong>{{ .concept }}</strong></a>: {{ .how }}</li>
 {{ end }}
 </ul>
 

@@ -12,7 +12,9 @@
         "concept": "Intensive Properties",
         "how": "Assemblages emerge from intensive differences (temperature gradients, population densities) that drive morphogenesis"
       }
-    ]
+    ],
+    "author": "Manuel DeLanda",
+    "book": "Philosophy and Simulation"
   },
   {
     "title": "Morphogenesis",
@@ -27,7 +29,9 @@
         "concept": "Intensive Properties",
         "how": "Intensive gradients (pressure, temperature, chemical potential) are the engines of morphogenesis"
       }
-    ]
+    ],
+    "author": "Manuel DeLanda",
+    "book": "Philosophy and Simulation"
   },
   {
     "title": "Stratification",
@@ -42,7 +46,9 @@
         "concept": "Morphogenesis",
         "how": "New strata form through morphogenetic processes that stabilize previously fluid dynamics into durable forms"
       }
-    ]
+    ],
+    "author": "Manuel DeLanda",
+    "book": "Philosophy and Simulation"
   },
   {
     "title": "Intensive Properties",
@@ -57,7 +63,9 @@
         "concept": "Morphogenesis",
         "how": "All morphogenetic processes are driven by intensive differences that break symmetry and generate form"
       }
-    ]
+    ],
+    "author": "Manuel DeLanda",
+    "book": "Philosophy and Simulation"
   },
   {
     "title": "Extensive Properties",
@@ -72,7 +80,9 @@
         "concept": "Virtual/Actual",
         "how": "The actual consists of extensive, fully determined states; the virtual is the intensive realm of tendencies"
       }
-    ]
+    ],
+    "author": "Manuel DeLanda",
+    "book": "Philosophy and Simulation"
   },
   {
     "title": "Virtual/Actual",
@@ -87,7 +97,9 @@
         "concept": "Phase Space",
         "how": "Phase space maps virtual potentials (attractors, bifurcations) that structure actual trajectories"
       }
-    ]
+    ],
+    "author": "Manuel DeLanda",
+    "book": "Philosophy and Simulation"
   },
   {
     "title": "Phase Space",
@@ -102,7 +114,9 @@
         "concept": "Morphogenesis",
         "how": "Bifurcations in phase space mark points where morphogenetic processes generate new forms"
       }
-    ]
+    ],
+    "author": "Manuel DeLanda",
+    "book": "Philosophy and Simulation"
   },
   {
     "title": "Singularities",
@@ -117,7 +131,9 @@
         "concept": "Phase Space",
         "how": "Singularities appear as bifurcation points where phase space structure changes"
       }
-    ]
+    ],
+    "author": "Manuel DeLanda",
+    "book": "Philosophy and Simulation"
   },
   {
     "title": "Emergence",
@@ -132,7 +148,9 @@
         "concept": "Morphogenesis",
         "how": "Emergence is the outcome of morphogenetic processes where interactions generate novel forms"
       }
-    ]
+    ],
+    "author": "Manuel DeLanda",
+    "book": "Philosophy and Simulation"
   },
   {
     "title": "Heterogenesis",
@@ -147,6 +165,8 @@
         "concept": "Virtual/Actual",
         "how": "Heterogenesis is actualization that diverges from past actualizations, exploring new regions of the virtual"
       }
-    ]
+    ],
+    "author": "Manuel DeLanda",
+    "book": "Philosophy and Simulation"
   }
 ]

@@ -3,23 +3,21 @@
 
 <p><em>Source: {{ (index .Site.Data.glossary 0).author }} — {{ (index .Site.Data.glossary 0).book }}</em></p>
 
-<h1>DeLanda Concepts Glossary</h1>
-
 {{ range .Site.Data.glossary }}
 <h2>{{ .title }}</h2>
 
-<h3>Philosophical Description</h3>
+<h3>Description</h3>
 <p>{{ .description }}</p>
 
-<h3>World of Darkness Context</h3>
-<div>{{ .RPG_description | markdownify }}</div>
-
-<p><strong>Related Concepts:</strong></p>
+<h3>Related</h3>
 <ul>
 {{ range .relatesTo }}
 <li><strong>{{ .concept }}</strong>: {{ .how }}</li>
 {{ end }}
 </ul>
+
+<h3>Description, for the RPG inclined</h3>
+<div>{{ .RPG_description | markdownify }}</div>
 
 <hr>
 {{ end }}

@@ -21,6 +21,7 @@ draft = false
 ## misc notes
 
 - anchoring in indigenous perspectives
+    - Question, I get my indigenous perspectives from podcasts, and my basic workflow is to just listen and keep in touch with myself while I see what resonates, then some things stick. I boil those down to simple understandings I can actually impliment in my life. Then I impliment them and see how things change. Can this process be a part of our identity group? It's very non-academic.
 - legibility; disappearences in Argentina;
 - \*-nymity (anonymity, pseudonymity and more)
 - prioritize forkability, interfaces for people to get together and run with the idea

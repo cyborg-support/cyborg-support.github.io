@@ -31,3 +31,7 @@ draft = false
 ### can we incorporate some natural lifecycles into the process? forking etc.? sunsets? as needed
 
 fundamental meta-question: is "this" a "study group" or an inclusive participatory study *process* with healthy lifecycles and regenerative aspects, with coming and going, freedom, joy, etc
+
+### Spencer Notes
+
+I find the hardest psrt is to have a **point** to the group. I propose we take enough time to state what we think our identities are. First we could say where we come from, then how we are connected into the world now, and perhaps lastly we talk about our understanding of what the borders of identitiy are to each of us. What say you?
